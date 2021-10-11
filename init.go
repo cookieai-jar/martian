@@ -21,7 +21,7 @@ import (
 )
 
 var (
-	level = flag.Int("v", 0, "log level")
+	level = flag.Int("martian.v", 0, "log level")
 )
 
 // Init runs common initialization code for a martian proxy.
