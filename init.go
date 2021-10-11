@@ -20,12 +20,9 @@ import (
 	mlog "github.com/google/martian/v3/log"
 )
 
-var (
-	level = flag.Int("v", 0, "log level")
-)
-
 // Init runs common initialization code for a martian proxy.
 func Init() {
+	level := flag.Int("v", 0, "log level")
 	flag.Parse()
 	mlog.SetLevel(*level)
 }
