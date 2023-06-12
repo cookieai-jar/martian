@@ -76,6 +76,7 @@ func NewProxy() *Proxy {
 			Proxy:                 http.ProxyFromEnvironment,
 			TLSHandshakeTimeout:   10 * time.Second,
 			ExpectContinueTimeout: time.Second,
+			TLSClientConfig:       &tls.Config{InsecureSkipVerify: true},
 		},
 		timeout: 5 * time.Minute,
 		closing: make(chan bool),
